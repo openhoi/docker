@@ -18,6 +18,6 @@ RUN apt-get update && apt-get install -y lsb-release sudo tzdata && apt-get clea
 # Set time zone
 RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime && dpkg-reconfigure --frontend noninteractive tzdata
 
-# Run package script
+# Run main script
 RUN chmod +x package
-ENTRYPOINT ["./package"]
+ENTRYPOINT ["./docker-run"]

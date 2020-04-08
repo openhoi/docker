@@ -15,6 +15,6 @@ WORKDIR /openhoi
 # Install required dependencies
 RUN apt-get update && apt-get install -y lsb-release sudo && apt-get clean
 
-# Run package script
+# Run main script
 RUN chmod +x package
-ENTRYPOINT ["./package"]
+ENTRYPOINT ["./docker-run"]

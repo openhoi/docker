@@ -9,6 +9,6 @@ WORKDIR /openhoi
 # Install lsb-release
 RUN yum -y update && yum -y install redhat-lsb yum-utils && package-cleanup --leaves --all
 
-# Run package script
+# Run main script
 RUN chmod +x package
-ENTRYPOINT ["./package"]
+ENTRYPOINT ["./docker-run"]
