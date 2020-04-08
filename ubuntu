@@ -19,5 +19,5 @@ RUN apt-get update && apt-get install -y lsb-release sudo tzdata && apt-get clea
 RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime && dpkg-reconfigure --frontend noninteractive tzdata
 
 # Run main script
-RUN chmod +x package
+RUN chmod +x docker-run
 ENTRYPOINT ["./docker-run"]

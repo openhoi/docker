@@ -16,5 +16,5 @@ WORKDIR /openhoi
 RUN apt-get update && apt-get install -y lsb-release sudo && apt-get clean
 
 # Run main script
-RUN chmod +x package
+RUN chmod +x docker-run
 ENTRYPOINT ["./docker-run"]
